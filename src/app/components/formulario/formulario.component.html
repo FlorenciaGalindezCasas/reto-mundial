@@ -1,1 +1,10 @@
-<p>formulario works!</p>
+<form [formGroup]="login"> 
+  <label>Ingrese email</label>
+  <input formControlName="email" type="email" required="email">
+
+  <label>Ingrese contraseña</label>
+  <input formControlName="password" type="password" required="password">
+
+  <button type="submit" (click)="onSubmit()">Login</button>
+
+</form>
