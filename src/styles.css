@@ -3,5 +3,28 @@ ul{
 }
 
 img{
-    width: 2em;
+    width: 5em;
 }
+
+.col-sm-6{
+    white-space: nowrap;
+}
+
+.col-sm-6 img{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.col-sm-6 input{
+    width: 3em;
+    margin-right: 20%;
+    margin-left: 10%;
+}
+
+td{
+  border: solid;
+}
+
+/* .right ul li img{
+    
+} */
