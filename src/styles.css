@@ -1,3 +1,4 @@
+
 ul{
     list-style: none;
 }
@@ -24,6 +25,36 @@ img{
 td{
   border: solid;
 }
+
+/* Estilos de las tablas */
+.inputs{
+    display: flex;
+    gap: 10px;
+}
+
+.inputs input{
+    max-width: 50px;
+    max-height: 25px;
+}
+
+.winner{
+    max-width: 150px;
+    max-height: 80px;
+    border: 2px solid saddlebrown;
+}
+
+.th-header{
+    background-color: saddlebrown;
+    color: white;
+}
+
+.btn-next{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
 
 /* .right ul li img{
     
