@@ -6,6 +6,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CuartosFinalComponent } from './pages/cuartos-final/cuartos-final.component';
+import { OctavosFinalComponent } from './pages/octavos-final/octavos-final.component';
+import { SemisComponent } from './pages/semis/semis.component';
+import { DefinicionComponent } from './pages/definicion/definicion.component';
 
 
 @NgModule({
@@ -13,7 +17,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FormularioComponent
+    FormularioComponent,
+    CuartosFinalComponent,
+    OctavosFinalComponent,
+    SemisComponent,
+    DefinicionComponent
   ],
   imports: [
     BrowserModule,
