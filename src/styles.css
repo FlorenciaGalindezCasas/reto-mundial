@@ -1,4 +1,11 @@
+h1{
+     font-family: Poppins, sans-serif;
+     padding-left: 5%;
+}
 
+h2{
+     padding-left: 5%;
+}
 ul{
     list-style: none;
 }
@@ -9,6 +16,11 @@ img{
 
 .col-sm-6{
     white-space: nowrap;
+    font-family: Poppins, sans-serif;
+    margin-bottom: 5%;
+}
+.col-sm-6 input{
+    text-align: center;
 }
 
 .col-sm-6 img{
@@ -18,7 +30,6 @@ img{
 }
 
 .col-sm-6 li {
-    /* border: 2px solid black; */
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -29,19 +40,30 @@ img{
     width: 3em;
 }
 
-
-
-td{
-  border:3px solid;
-}
-
 /* Estilos de las tablas */
-.col-sm-6 table td{
-    width: 32.925px;
+
+.posiciones{
+    margin-left: 5%;
+    font-family: Poppins, sans-serif;
+    width: 129px;
+}
+.posiciones tr{
+    border: 0.05em solid; 
+    text-align: center;   
+}
+.posiciones input{
+    width: 3em;
+    border: none;
+    text-align: right;
 }
 
-.col-sm-6 table .tablePais{
-    width: 129px;
+.posiciones input:focus{
+    outline: none;
+}
+
+.posiciones td{
+    width: 32.925px;
+    border: 0.05em solid;
 }
 
 .inputs{
