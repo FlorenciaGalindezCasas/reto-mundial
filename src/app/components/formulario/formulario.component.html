@@ -1,11 +1,20 @@
-<form [formGroup]="login"> 
-  <label>Ingrese email</label>
-  <input formControlName="email" type="email" required="email">
 
-  <label>Ingrese contraseña</label>
-  <input formControlName="password" type="password" required="password">
-
-  <button type="submit" (click)="onSubmit()">Login</button>
-</form>
-
-
+<div class="container">
+  <div class="form-contenedor">
+      <h2 class="text-center">Login</h2>
+      <div class="row" >
+          <form [formGroup]="formulariologin">
+              <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" placeholder="Email" formControlName="email" />
+              </div>
+              <div class="mb-3">
+                  <label class="form-label">Password</label>
+                  <input type="password" class="form-control" placeholder="Password" formControlName="password" />
+              </div>
+          </form>
+      </div>   
+      <button class="btn btn-info" type="submit" (click)="onSubmit()" [disabled]="formulariologin.invalid" >Login</button>
+  </div> 
+ 
+</div>
