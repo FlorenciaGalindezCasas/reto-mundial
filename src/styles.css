@@ -12,21 +12,38 @@ img{
 }
 
 .col-sm-6 img{
-    padding-left: 10%;
-    padding-right: 10%;
+    width: 2em;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.col-sm-6 li {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+
 }
 
 .col-sm-6 input{
     width: 3em;
-    margin-right: 20%;
-    margin-left: 10%;
 }
 
+
+
 td{
-  border: solid;
+  border:3px solid;
 }
 
 /* Estilos de las tablas */
+.col-sm-6 table td{
+    width: 32.925px;
+}
+
+.col-sm-6 table .tablePais{
+    width: 129px;
+}
+
 .inputs{
     display: flex;
     gap: 10px;
