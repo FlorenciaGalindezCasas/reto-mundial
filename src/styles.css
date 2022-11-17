@@ -72,6 +72,22 @@ td{
     padding: 10px;
 }
 
+/* Estilos formularios */
+.form-contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+    padding-top: 120px;
+}
+
+
+.form-control{
+    width: 500px;
+}
+
 
 /* .right ul li img{
     

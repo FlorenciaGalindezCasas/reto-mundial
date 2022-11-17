@@ -10,6 +10,8 @@ import { CuartosFinalComponent } from './pages/cuartos-final/cuartos-final.compo
 import { OctavosFinalComponent } from './pages/octavos-final/octavos-final.component';
 import { SemisComponent } from './pages/semis/semis.component';
 import { DefinicionComponent } from './pages/definicion/definicion.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { DefinicionComponent } from './pages/definicion/definicion.component';
     CuartosFinalComponent,
     OctavosFinalComponent,
     SemisComponent,
-    DefinicionComponent
+    DefinicionComponent,
+    RegistroComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./formulario.component.css'],
 })
 export class FormularioComponent implements OnInit {
-  login: FormGroup = this.fb.group({
+  formulariologin: FormGroup = this.fb.group({
     email: ['', Validators.required],
     password: ['', Validators.required],
   });
@@ -18,8 +18,8 @@ export class FormularioComponent implements OnInit {
   ngOnInit(): void {}
   
   onSubmit(): void {
-    console.log(this.login.value)
-    this.route.navigate(["/home"])
+    console.log(this.formulariologin.value)
+    this.route.navigate(['home'])
   }
 }
 
