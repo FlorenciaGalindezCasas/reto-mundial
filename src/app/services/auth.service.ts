@@ -4,8 +4,6 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  signInWithPopup,
-  GoogleAuthProvider
 } from '@angular/fire/auth/';
 
 @Injectable({
@@ -28,7 +26,4 @@ export class AuthService {
     return signOut(this.auth)
    }
 
-   loginWithGoogle(){
-    return signInWithPopup(this.auth, new GoogleAuthProvider())
-   }
 }

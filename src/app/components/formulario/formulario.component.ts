@@ -29,12 +29,5 @@ export class FormularioComponent implements OnInit {
    }
   }
 
-  loginWithGoogle(){
-    this.auth.loginWithGoogle()
-    .then(()=>{
-      this.route.navigate(['/home'])
-    })
-    .catch(error => console.log(error))
-  }
 }
 
