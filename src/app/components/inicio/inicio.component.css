@@ -1,0 +1,11 @@
+.container{
+    margin: 0px;
+    padding: 0;
+    min-width: 92%;
+    height: 100vh;
+    box-sizing: border-box;
+    /* background-image:url("");
+    background-repeat:no-repeat;
+    background-size: 100% 100%; */
+}
+
