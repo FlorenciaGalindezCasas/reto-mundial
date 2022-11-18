@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import {
   Auth,
   createUserWithEmailAndPassword,
@@ -11,16 +13,16 @@ import {
 })
 export class AuthService {
 
-  constructor(private auth: Auth ) { }
+  constructor(private auth: Auth, private htttp: HttpClient  ) { }
 
-  register({ email, password}: any){
-    return createUserWithEmailAndPassword(this.auth, email, password)
+   registerUser(url: string, body: any):Observable<any>{
+    return this.htttp.post(url, body)
+
    }
-  
-   login({email, password}: any){
-    return signInWithEmailAndPassword(this.auth, email, password)
-   }
-  
+
+   loginUser(url: string, body: any):Observable<any>{
+    return this.htttp.post(url, body)
+  }
   
    logout(){
     return signOut(this.auth)

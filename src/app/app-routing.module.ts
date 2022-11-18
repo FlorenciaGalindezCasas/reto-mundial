@@ -8,7 +8,6 @@ import { SemisComponent } from './pages/semis/semis.component';
 import { DefinicionComponent } from './pages/definicion/definicion.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { InicioComponent } from './components/inicio/inicio.component';
-import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
@@ -16,7 +15,6 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    ...canActivate(() => redirectUnauthorizedTo(['register']))
   },
   { path: 'login', component: FormularioComponent },
   { path: 'registro', component: RegistroComponent },

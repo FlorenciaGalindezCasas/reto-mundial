@@ -19,14 +19,18 @@
         <h2>GRUPO A</h2>
         <div class="d-flex" id="grupoA">
             <div class="left   col-sm-6">
-              <ul>
-                <li><img src="./assets/img/qatar.png" /> CATAR <input type="number" aling='right'></li> 
-                <li><img src="./assets/img/senegal.png" alt="">SENEGAL <input type="number"></li>
-                <li><img src="./assets/img/qatar.png" alt="">CATAR<input type="number"></li>
-                <li><img src="./assets/img/paises-bajos.png" alt="">PAISES BAJOS<input type="number"></li>
-                <li><img src="./assets/img/ecuador.png" alt="">ECUADOR<input type="number"></li>
-                <li><img src="./assets/img/paises-bajos.png" alt="">PAISES BAJOS<input type="number"></li>
-              </ul>
+                <form [formGroup]="inputGoles">
+                  <ul>
+                  <li><img src="./assets/img/qatar.png" /> CATAR <input formControlName="qatar" type="number" aling='right'></li> 
+                  <li><img src="./assets/img/senegal.png" alt="">SENEGAL <input formControlName="senegal" type="number"></li>
+                  <li><img src="./assets/img/qatar.png" alt="">CATAR<input formControlName="qatar" type="number"></li>
+                  <li><img src="./assets/img/paises-bajos.png" alt="">PAISES BAJOS<input formControlName="paises_bajos" type="number"></li>
+                  <li><img src="./assets/img/ecuador.png" alt="">ECUADOR<input formControlName="ecuador" type="number"></li>
+                  <li><img src="./assets/img/paises-bajos.png" alt="">PAISES BAJOS<input formControlName="paises_bajos" type="number"></li>
+                </ul>
+                </form>
+              </div>
+ 
              </div>
              <div class="right   col-sm-6  col-sm-6">
               <ul>
@@ -808,5 +812,6 @@
 <div class="btn-next">
             <button class="btn btn-success" routerLink="/octavos">Ir a octavos de final</button>
         </div>
+        <button (click)="votar()">Votar</button>
 
 </div>

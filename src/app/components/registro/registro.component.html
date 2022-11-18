@@ -8,8 +8,8 @@
                   <input type="username" class="form-control" placeholder="Name" formControlName="name" />
               </div>
               <div class="mb-3">
-                    <label for="disabledSelect" class="form-label">Nacionality</label>
-                    <select class="form-control" aria-label="Default select example">
+                    <label class="form-label">Nacionality</label>
+                    <select class="form-control" formControlName="nationality" aria-label="Default select example">
                        <option value="Alemania">Alemania</option>
                         <option value="Andorra">Andorra</option>
                         <option value="Angola">Angola</option>
@@ -214,7 +214,7 @@
                 </div>
             </form>
         </div>   
-        <button class="btn btn-danger" type="submit" (click)="onRegister()" [disabled]="formularioRegistro.invalid" >Registro</button>
+        <button class="btn btn-danger" type="submit" (click)="registrarUser()" [disabled]="formularioRegistro.invalid" >Registro</button>
     </div>
     
     <div class="login">

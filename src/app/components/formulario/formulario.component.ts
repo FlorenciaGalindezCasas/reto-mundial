@@ -18,15 +18,16 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {}
   
-  onSubmit(){
-   if(this.formulariologin.valid){
-    this.auth.login(this.formulariologin.value)
-    .then(respuesta => {
-      console.log(respuesta)
-      this.route.navigate(['/home'])
+  onLogin(){
+    this.auth.loginUser('https://reto-mundial.herokuapp.com/user/signin', this.formulariologin.value)
+    .subscribe({
+      next: ((data)=>{
+        console.log(data)
+        this.route.navigate(['/home'])
+      }),
+      error: (error => console.log(error)),
+      complete: (()=> console.log("Peticion terminada"))
     })
-    .catch(error => console.log(error))
-   }
   }
 
 }

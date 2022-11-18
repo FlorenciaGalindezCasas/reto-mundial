@@ -17,6 +17,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { providePerformance,getPerformance } from '@angular/fire/performance';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { providePerformance,getPerformance } from '@angular/fire/performance';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     providePerformance(() => getPerformance())
