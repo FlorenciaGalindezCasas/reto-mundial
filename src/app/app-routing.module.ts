@@ -8,18 +8,19 @@ import { SemisComponent } from './pages/semis/semis.component';
 import { DefinicionComponent } from './pages/definicion/definicion.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 const routes: Routes = [
-  {path:"", redirectTo: 'home', pathMatch:'full'},
-  {path:"home", component: HomeComponent},
-  {path:"login", component: FormularioComponent},
-  {path:"registro", component: RegistroComponent},
-  {path:"octavos", component: OctavosFinalComponent},
-  {path:"cuartos", component: CuartosFinalComponent},
-  {path:"semis", component: SemisComponent},
-  {path:"definicion", component: DefinicionComponent},
-  {path:"**", redirectTo:"home", pathMatch:"full"},
-  
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+  { path: 'inicio', component: InicioComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: FormularioComponent },
+  { path: 'registro', component: RegistroComponent },
+  { path: 'octavos', component: OctavosFinalComponent },
+  { path: 'cuartos', component: CuartosFinalComponent },
+  { path: 'semis', component: SemisComponent },
+  { path: 'definicion', component: DefinicionComponent },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({

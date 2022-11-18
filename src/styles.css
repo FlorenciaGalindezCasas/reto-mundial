@@ -1,3 +1,92 @@
+/* Estilos InicioComponent */
+@font-face {
+    font-family: football;
+    src: url(./fonts/FootballIsComingHome-mLXAv.ttf);
+}
+
+#navigation{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: space-between;
+}
+
+
+#logo img{
+    width: 7em;
+}
+
+#a{
+    padding-top: 3%;
+    padding-left: 35%;
+    padding-right: 0;
+    
+}
+
+#a ul li{
+    display: inline;
+    padding: 3em;
+    font-size: 20px;
+    text-align:center;  
+}
+
+#a ul li a{
+   color: rgb(151, 30, 30);   
+}
+
+#pres{
+  margin-top: 10%;
+  text-align: right;
+  font-family: 'Abril Fatface', serif;
+  font-size: 80px;
+  align-items: right;
+  color: #780808;   
+  padding-left: 10%;
+ }
+#pres #o:hover{
+    margin-top: -10%;
+    padding-left: -10%;
+
+}
+#o {
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;  
+}
+
+#o:hover{
+    color: black;
+    font-family: football;
+    font-size: 1.5em;
+    animation: shrinkjump 3s ease-in;
+    transform-origin: bottom center;
+}
+
+@keyframes shrinkjump {
+    10%, 35% {    
+	transform: rotate(40deg);}
+
+	45%, 50% {
+		transform: scale(1) translate(0, -100px);
+	}
+	
+	80% {
+		transform: scale(0) translate(0, 0);
+	}
+}
+
+#mascot{
+padding-left: 7%;
+}
+#mascot img{
+    width: 400px;    
+}
+
+/* Estilos header */
+.navbar-brand img{
+    width: 300em;
+}
+
 h1{
      font-family: Poppins, sans-serif;
      padding-left: 5%;
@@ -110,7 +199,3 @@ img{
     width: 500px;
 }
 
-
-/* .right ul li img{
-    
-} */
