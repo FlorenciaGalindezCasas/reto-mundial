@@ -12,6 +12,7 @@ import { SemisComponent } from './pages/semis/semis.component';
 import { DefinicionComponent } from './pages/definicion/definicion.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ErrorComponent } from './pages/error/error.component';
     SemisComponent,
     DefinicionComponent,
     RegistroComponent,
-    ErrorComponent
+    ErrorComponent,
+    InicioComponent,
   ],
   imports: [
     BrowserModule,
