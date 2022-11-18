@@ -208,6 +208,11 @@ img{
 
 
 .form-control{
-    width: 500px;
+    width: 450px;
+    border-bottom: 2px solid #c4c4c4;
+    outline: none;
+    margin-bottom:30px;
+    /* padding: 7px 8px 3px 5px; */
+  
 }
 
