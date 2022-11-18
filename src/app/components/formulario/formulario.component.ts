@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-formulario',
@@ -13,13 +14,27 @@ export class FormularioComponent implements OnInit {
     password: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder, private route: Router) {}
+  constructor(private fb: FormBuilder, private route: Router, private auth: AuthService) {}
 
   ngOnInit(): void {}
   
-  onSubmit(): void {
-    console.log(this.formulariologin.value)
-    this.route.navigate(['home'])
+  onSubmit(){
+   if(this.formulariologin.valid){
+    this.auth.login(this.formulariologin.value)
+    .then(respuesta => {
+      console.log(respuesta)
+      this.route.navigate(['/home'])
+    })
+    .catch(error => console.log(error))
+   }
+  }
+
+  loginWithGoogle(){
+    this.auth.loginWithGoogle()
+    .then(()=>{
+      this.route.navigate(['/home'])
+    })
+    .catch(error => console.log(error))
   }
 }
 

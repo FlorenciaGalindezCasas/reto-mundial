@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CredentialResponse, PromptMomentNotification } from 'google-one-tap';
 
 @Component({
   selector: 'app-inicio',
