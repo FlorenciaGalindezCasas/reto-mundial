@@ -7,13 +7,17 @@ import { CuartosFinalComponent } from './pages/cuartos-final/cuartos-final.compo
 import { SemisComponent } from './pages/semis/semis.component';
 import { DefinicionComponent } from './pages/definicion/definicion.component';
 import { RegistroComponent } from './components/registro/registro.component';
-import { ErrorComponent } from './pages/error/error.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: 'inicio', component: InicioComponent },
-  { path: 'home', component: HomeComponent },
+  {
+    path: 'home',
+    component: HomeComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['register']))
+  },
   { path: 'login', component: FormularioComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'octavos', component: OctavosFinalComponent },
@@ -28,3 +32,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

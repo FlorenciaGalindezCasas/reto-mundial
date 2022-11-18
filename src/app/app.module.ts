@@ -13,6 +13,9 @@ import { DefinicionComponent } from './pages/definicion/definicion.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { InicioComponent } from './components/inicio/inicio.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]

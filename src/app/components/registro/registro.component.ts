@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-registro',
@@ -11,17 +12,20 @@ export class RegistroComponent implements OnInit {
   formularioRegistro: FormGroup = this.fb.group({
     email: ['', Validators.required, Validators.email],
     password: ['', Validators.required],
-
   })
 
-  constructor(private fb: FormBuilder, private route: Router) { }
+  constructor(private fb: FormBuilder, private route: Router, private auth: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  onRegister():void{
-    console.log(this.formularioRegistro.value)
-    this.route.navigate(['/login'])
+  onRegister(){
+    this.auth.register(this.formularioRegistro.value)
+    .then(response =>{
+      console.log(response)
+      this.route.navigate(['/login'])
+    })
+    .catch(error => console.log(error))
   }
 
 }
