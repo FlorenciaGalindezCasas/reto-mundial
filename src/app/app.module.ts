@@ -16,6 +16,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { providePerformance,getPerformance } from '@angular/fire/performance';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     AppRoutingModule,
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    providePerformance(() => getPerformance())
   ],
   providers: [],
   bootstrap: [AppComponent]

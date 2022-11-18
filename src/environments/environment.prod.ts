@@ -1,11 +1,12 @@
 export const environment = {
   firebase: {
-    projectId: 'autch-reto-mundial',
-    appId: '1:636192904263:web:2a86d9f163d80bab898d62',
-    storageBucket: 'autch-reto-mundial.appspot.com',
-    apiKey: 'AIzaSyCNL9HVzKK2fdtC9vfFIpVUfsqK5EEA9zQ',
-    authDomain: 'autch-reto-mundial.firebaseapp.com',
-    messagingSenderId: '636192904263',
+    projectId: 'fourth-memento-368920',
+    appId: '1:264307484085:web:059142734bf9a4408865fc',
+    storageBucket: 'fourth-memento-368920.appspot.com',
+    apiKey: 'AIzaSyC1LzlCkPmx34U85p9kO2ZULgikg-yiSQA',
+    authDomain: 'fourth-memento-368920.firebaseapp.com',
+    messagingSenderId: '264307484085',
+    measurementId: 'G-3V020NDPKF',
   },
   production: true
 };

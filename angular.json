@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "reto-mundial:build:production",
+            "firebaseProject": "fourth-memento-368920",
+            "firebaseHostingSite": "fourth-memento-368920"
+          }
         }
       }
     }

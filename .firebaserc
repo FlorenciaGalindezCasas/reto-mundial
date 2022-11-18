@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fourth-memento-368920": {
+      "hosting": {
+        "reto-mundial": [
+          "fourth-memento-368920"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fourth-memento-368920"
+  }
+}
